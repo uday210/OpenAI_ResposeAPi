@@ -1,14 +1,12 @@
-I'll help you add the complete README.md file to your project. Since the file appears unchanged, I'll provide the complete contents again:
-
-```markdown:README.md
 # OpenAI API Examples
 
-This repository contains various examples demonstrating the usage of OpenAI's API with Python. The examples include basic API calls, chat interfaces, and AI agents implementation.
+This repository contains various examples demonstrating the usage of OpenAI's API with Python. The examples include basic API calls, chat interfaces, AI agents implementation, and image analysis.
 
 ## Prerequisites
 
 - Python 3.8 or higher
 - OpenAI API key
+- Webcam (for image analysis example)
 
 ## Installation
 
@@ -31,7 +29,7 @@ source .venv/bin/activate
 
 3. Install required packages:
 ```bash
-pip install openai gradio openai-agents
+pip install openai gradio openai-agents pillow
 ```
 
 4. Set up your OpenAI API key:
@@ -81,8 +79,17 @@ Simulates a Salesforce development team with different roles using AI agents.
 python SfdcTeam.py
 ```
 
+### 7. Webcam Image Analyzer (WebcamAnalyzer.py)
+A Gradio interface that captures images from your webcam and analyzes them using OpenAI's vision model. This example allows you to:
+- Capture images from your webcam
+- Ask questions about the captured image
+- Get AI-powered analysis of the image
+```bash
+python WebcamAnalyzer.py
+```
+
 ## Note
 - Make sure to replace `your-api-key-here` with your actual OpenAI API key
-- The model "gpt-4o" used in the examples should be replaced with an available model from your OpenAI account
-- The web interface examples (ChatBotApp.py and SimpleUi.py) will launch a local server that you can access through your web browser
-
+- The model names used in the examples should match the models available in your OpenAI account
+- The web interface examples (ChatBotApp.py, SimpleUi.py, and WebcamAnalyzer.py) will launch a local server that you can access through your web browser
+- For the WebcamAnalyzer example, ensure you have a working webcam and proper permissions for browser access
